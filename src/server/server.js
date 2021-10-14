@@ -68,6 +68,7 @@ app.prepare().then(async () => {
         const { shop, accessToken, scope } = ctx.state.shopify;
         const host = ctx.query.host;
         console.log("Online AUTH!");
+        console.log("host", host);
         const offlineSession = await db.Session.findOne({
           where: {
             ShopDomain: shop,
